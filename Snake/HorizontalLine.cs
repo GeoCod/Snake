@@ -10,15 +10,15 @@ namespace Snake
     {
         List<Point> plist;
 
-        public HorizontalLine()
+        public HorizontalLine(int xLeft, int xReight, int y, char sym)
         {
             plist = new List<Point>();
-            Point p1 = new Point(4, 4, '*');
-            Point p2 = new Point(5, 4, '*');
-            Point p3 = new Point(6, 4, '*');
-            plist.Add(p1);
-            plist.Add(p2);
-            plist.Add(p3);
+            for(int x = xLeft; x <= xReight; x++)
+            {
+                Point p = new Point(x, y, sym);
+                plist.Add(p);
+            }
+
         }
 
         public void Draw()
