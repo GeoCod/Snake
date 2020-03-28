@@ -16,51 +16,50 @@ namespace Snake
             Point p2 = new Point(4, 5, '#');
             p2.Draw( );
 
+            Point p3 = new Point(10, 17, '!');
 
-            int x = 1;
-            Func1( x );
-            Console.WriteLine( $"Func1 x={x}" );
+            Point p4 = new Point(13, 0, '&');
 
-            Func2( x );
-            Console.WriteLine( $"Func2 x={x}" );
 
-            Func3( x );
-            Console.WriteLine( $"Func3 x={x}" );
+            //создаем спсиок и добавляем три целых значения
+            List<int> numlist = new List<int>();
+            numlist.Add(0);
+            numlist.Add(1);
+            numlist.Add(2);
 
-            Move( p1, 10, 10 );
-            Console.WriteLine( $"Move(p1, 10, 10) p1.x = {p1.x}, p1.y = {p1.y}" );
+            //получение значения из списка
+            int x = numlist[0];
+            int y = numlist[1];
+            int z = numlist[2];
 
-            Reset( p2 );
-            Console.WriteLine( $"Reset(p2) p2.x = {p2.x}, p2.y = {p2.y}" );
+            //перебор значений списка
+            foreach(int i in numlist)
+            {
+                Console.WriteLine(i);
+            }
+
+            // удаляем из списка
+            numlist.RemoveAt(0);
+
+            List<Point> plist = new List<Point>();
+            plist.Add(p1);
+            plist.Add(p2);
+            plist.Add(p3);
+            plist.Add(p4);
+
+
+            List<char> charList = new List<char>();
+            charList.Add('!');
+            charList.Add('%');
+            charList.Add('^');
+            charList.Add('@');
+            charList.Add('[');
+
+            char symTest = charList[3];
+
+            Console.WriteLine(symTest);
 
             Console.ReadLine();
-        }
-
-        private static void Reset( Point p )
-        {
-            p = new Point();
-            //  Здесь переменная p2 останется без изменений.
-        }
-
-        private static void Move( Point p, int dx, int dy )
-        {
-            p.x = p.x + dx;
-            p.y = p.y + dy;
-        }
-
-        private static void Func3( int x )
-        {
-            x++;
-        }
-
-        private static void Func2( int val )
-        {
-            val++;
-        }
-
-        private static void Func1( int x )
-        {
-
         }
     }
 }
