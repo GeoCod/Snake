@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
+    /// <summary>
+    /// Перечисление напарвлений
+    /// </summary>
     enum Direction
     {
         LEFT,

@@ -32,6 +32,11 @@ namespace Snake
             sym = p.sym;
         }
 
+        /// <summary>
+        /// Метод пермещения точек в определенном напарвлении
+        /// </summary>
+        /// <param name="offset">Смещение</param>
+        /// <param name="direction">Напарвление</param>
         public void Move(int offset, Direction direction)
         {
             if(direction == Direction.RIGHT)
@@ -50,6 +55,12 @@ namespace Snake
             {
                 y += offset;
             }
+        }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
         }
 
         public void Draw()

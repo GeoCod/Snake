@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
+    /// <summary>
+    /// Базовый класс фигуры
+    /// </summary>
     class Figure
     {
         protected List<Point> plist;
-
+        
+        /// <summary>
+        /// Отрисовка объектов класса
+        /// </summary>
         public void Draw()
         {
             foreach (Point p in plist)
