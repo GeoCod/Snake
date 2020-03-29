@@ -16,7 +16,7 @@ namespace Snake
         /// <summary>
         /// Отрисовка объектов класса
         /// </summary>
-        public void Draw()
+        public virtual void Draw()
         {
             foreach (Point p in plist)
             {
