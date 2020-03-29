@@ -14,7 +14,7 @@ namespace Snake
         Direction direction;
 
         /// <summary>
-        /// 
+        /// Создание змейки с параметрами
         /// </summary>
         /// <param name="tail">Начальное положение точки</param>
         /// <param name="lenght">Длина змейки</param>
@@ -55,6 +55,18 @@ namespace Snake
             Point nextPoint = new Point(head);
             nextPoint.Move(1, direction);
             return nextPoint;
+        }
+
+        public void HandleKey(ConsoleKey key)
+        {
+            if (key == ConsoleKey.LeftArrow)
+                direction = Direction.LEFT;
+            else if (key == ConsoleKey.RightArrow)
+                direction = Direction.RIGHT;
+            else if (key == ConsoleKey.UpArrow)
+                direction = Direction.UP;
+            else if (key == ConsoleKey.DownArrow)
+                direction = Direction.DOWN;
         }
     }
 }

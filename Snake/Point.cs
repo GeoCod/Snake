@@ -33,7 +33,7 @@ namespace Snake
         }
 
         /// <summary>
-        /// Метод пермещения точек в определенном напарвлении
+        /// Пермещает точку в определенном напарвлении
         /// </summary>
         /// <param name="offset">Смещение</param>
         /// <param name="direction">Напарвление</param>
@@ -49,11 +49,11 @@ namespace Snake
             }
             else if (direction == Direction.DOWN)
             {
-                y -= offset;
+                y += offset;
             }
             else if ( direction == Direction.UP)
             {
-                y += offset;
+                y -= offset;
             }
         }
 
