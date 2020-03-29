@@ -32,6 +32,21 @@ namespace Snake
         }
 
         /// <summary>
+        /// Проверка на столкновение головы с телом змейки
+        /// </summary>
+        /// <returns></returns>
+        internal bool IsHitTail()
+        {
+            var head = plist.Last();
+            for(int i = 0; i < plist.Count - 2; i++)
+            {
+                if (head.IsHit(plist[i]))
+                    return true;
+            }
+            return false;
+        }
+
+        /// <summary>
         /// Поточечная перерисовка головы и хвоста змейки
         /// </summary>
         internal void Move()
@@ -70,6 +85,10 @@ namespace Snake
             return nextPoint;
         }
 
+        /// <summary>
+        /// Смена направления движения
+        /// </summary>
+        /// <param name="key">Направление из списка</param>
         public void HandleKey(ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow)
